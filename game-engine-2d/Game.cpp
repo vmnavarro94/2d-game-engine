@@ -7,7 +7,10 @@
 //
 
 #include "Game.hpp"
-Game::Game(): window("2D Game Engine") {}
+Game::Game(): window("2D Game Engine") {
+    vikingTexture.loadFromFile(workingDirectory.get() + "viking.png");
+    vikingSprite.setTexture(vikingTexture);
+}
 void Game::update()
 {
     window.update();
@@ -15,6 +18,7 @@ void Game::update()
 void Game::draw()
 {
     window.beginDraw();
+    window.draw(vikingSprite);
     // We’ll add draw code here.
     window.endDraw();
 }

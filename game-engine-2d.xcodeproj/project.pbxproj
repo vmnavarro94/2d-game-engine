@@ -10,16 +10,24 @@
 		3ECA34D428F7D62E002503DE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ECA34D328F7D62E002503DE /* main.cpp */; };
 		3ECA34E528F7D6DD002503DE /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ECA34E328F7D6DD002503DE /* Game.cpp */; };
 		3ECA34E828F7D725002503DE /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ECA34E628F7D725002503DE /* Window.cpp */; };
+		3ECA34EB28F7D8FC002503DE /* WorkingDirectory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ECA34E928F7D8FC002503DE /* WorkingDirectory.cpp */; };
+		3ECA34EE28F7DB70002503DE /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECA34ED28F7DB70002503DE /* CoreFoundation.framework */; };
+		3ECA34F228F7DC2B002503DE /* viking.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ECA34F128F7DC2B002503DE /* viking.png */; };
+		3ECA34F428F7DC3B002503DE /* game-engine-2d-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3ECA34F328F7DC3B002503DE /* game-engine-2d-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3ECA34CB28F7D62E002503DE /* game-engine-2d.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "game-engine-2d.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3ECA34CF28F7D62E002503DE /* game-engine-2d-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "game-engine-2d-Info.plist"; path = "../game-engine-2d-Info.plist"; sourceTree = "<group>"; };
 		3ECA34D328F7D62E002503DE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		3ECA34E328F7D6DD002503DE /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
 		3ECA34E428F7D6DD002503DE /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
 		3ECA34E628F7D725002503DE /* Window.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Window.cpp; sourceTree = "<group>"; };
 		3ECA34E728F7D725002503DE /* Window.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Window.hpp; sourceTree = "<group>"; };
+		3ECA34E928F7D8FC002503DE /* WorkingDirectory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = WorkingDirectory.cpp; sourceTree = "<group>"; };
+		3ECA34EA28F7D8FC002503DE /* WorkingDirectory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = WorkingDirectory.hpp; sourceTree = "<group>"; };
+		3ECA34ED28F7DB70002503DE /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		3ECA34F128F7DC2B002503DE /* viking.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = viking.png; sourceTree = "<group>"; };
+		3ECA34F328F7DC3B002503DE /* game-engine-2d-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "game-engine-2d-Info.plist"; path = "game-engine-2d/game-engine-2d-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ECA34EE28F7DB70002503DE /* CoreFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +47,7 @@
 			children = (
 				3ECA34CD28F7D62E002503DE /* game-engine-2d */,
 				3ECA34CC28F7D62E002503DE /* Products */,
+				3ECA34EC28F7DB70002503DE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +66,8 @@
 				3ECA34E428F7D6DD002503DE /* Game.hpp */,
 				3ECA34E628F7D725002503DE /* Window.cpp */,
 				3ECA34E728F7D725002503DE /* Window.hpp */,
+				3ECA34E928F7D8FC002503DE /* WorkingDirectory.cpp */,
+				3ECA34EA28F7D8FC002503DE /* WorkingDirectory.hpp */,
 				3ECA34D328F7D62E002503DE /* main.cpp */,
 				3ECA34D528F7D62E002503DE /* Resources */,
 				3ECA34CE28F7D62E002503DE /* Supporting Files */,
@@ -66,7 +78,7 @@
 		3ECA34CE28F7D62E002503DE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				3ECA34CF28F7D62E002503DE /* game-engine-2d-Info.plist */,
+				3ECA34F328F7DC3B002503DE /* game-engine-2d-Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -74,8 +86,17 @@
 		3ECA34D528F7D62E002503DE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3ECA34F128F7DC2B002503DE /* viking.png */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		3ECA34EC28F7DB70002503DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3ECA34ED28F7DB70002503DE /* CoreFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +158,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ECA34F428F7DC3B002503DE /* game-engine-2d-Info.plist in Resources */,
+				3ECA34F228F7DC2B002503DE /* viking.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,6 +193,7 @@
 				3ECA34D428F7D62E002503DE /* main.cpp in Sources */,
 				3ECA34E828F7D725002503DE /* Window.cpp in Sources */,
 				3ECA34E528F7D6DD002503DE /* Game.cpp in Sources */,
+				3ECA34EB28F7D8FC002503DE /* WorkingDirectory.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +295,10 @@
 				EXCLUDED_ARCHS = arm64;
 				INFOPLIST_FILE = "game-engine-2d/game-engine-2d-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				OTHER_CFLAGS = (
+					"-D",
+					MACOS,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -282,6 +310,10 @@
 				EXCLUDED_ARCHS = arm64;
 				INFOPLIST_FILE = "game-engine-2d/game-engine-2d-Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				OTHER_CFLAGS = (
+					"-D",
+					MACOS,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

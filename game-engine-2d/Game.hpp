@@ -9,6 +9,7 @@
 #ifndef Game_hpp
 #define Game_hpp
 #include "Window.hpp"
+#include "WorkingDirectory.hpp"
 
 class Game
 {
@@ -20,5 +21,8 @@ public:
     bool isRunning() const;
 private:
     Window window;
+    WorkingDirectory workingDirectory;
+    sf::Texture vikingTexture;
+    sf::Sprite vikingSprite;
 };
 #endif /* Game_hpp */
