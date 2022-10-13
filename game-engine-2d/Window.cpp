@@ -7,11 +7,13 @@
 //
 
 #include "Window.hpp"
+
 Window::Window(const std::string& windowName)
 : window(sf::VideoMode(800, 600), windowName, sf::Style::Titlebar)
 {
     window.setVerticalSyncEnabled(true);
 }
+
 void Window::update()
 {
     sf::Event event;
@@ -23,19 +25,28 @@ void Window::update()
         }
     }
 }
+
 void Window::beginDraw()
 {
     window.clear(sf::Color::White);
 }
+
 void Window::draw(const sf::Drawable& drawable)
 {
     window.draw(drawable);
 }
+
 void Window::endDraw()
 {
     window.display();
 }
+
 bool Window::isOpen() const
 {
     return window.isOpen();
+}
+
+sf::Vector2u Window::getCentre() const {
+    sf::Vector2u size = window.getSize();
+    return sf::Vector2u(size.x / 2, size.y / 2);
 }

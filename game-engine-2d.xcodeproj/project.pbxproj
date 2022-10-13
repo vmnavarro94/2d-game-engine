@@ -16,6 +16,10 @@
 		3ECA34FA28F7DF52002503DE /* game-engine-2d-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3ECA34F928F7DF52002503DE /* game-engine-2d-Info.plist */; };
 		3ECA34FD28F87DBC002503DE /* Bitmask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ECA34FB28F87DBC002503DE /* Bitmask.cpp */; };
 		3ECA350028F88128002503DE /* Input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ECA34FE28F88128002503DE /* Input.cpp */; };
+		3ECA350428F88C21002503DE /* SceneStateMachine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ECA350228F88C21002503DE /* SceneStateMachine.cpp */; };
+		3ECA350628F893E9002503DE /* RhythmOfWar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3ECA350528F893E9002503DE /* RhythmOfWar.jpg */; };
+		3ECA350928F89408002503DE /* SceneSplashScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ECA350728F89408002503DE /* SceneSplashScreen.cpp */; };
+		3ECA350C28F89983002503DE /* SceneGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ECA350A28F89983002503DE /* SceneGame.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,14 @@
 		3ECA34FC28F87DBC002503DE /* Bitmask.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Bitmask.hpp; sourceTree = "<group>"; };
 		3ECA34FE28F88128002503DE /* Input.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Input.cpp; sourceTree = "<group>"; };
 		3ECA34FF28F88128002503DE /* Input.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Input.hpp; sourceTree = "<group>"; };
+		3ECA350128F88A08002503DE /* Scene.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Scene.hpp; sourceTree = "<group>"; };
+		3ECA350228F88C21002503DE /* SceneStateMachine.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SceneStateMachine.cpp; sourceTree = "<group>"; };
+		3ECA350328F88C21002503DE /* SceneStateMachine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SceneStateMachine.hpp; sourceTree = "<group>"; };
+		3ECA350528F893E9002503DE /* RhythmOfWar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = RhythmOfWar.jpg; sourceTree = "<group>"; };
+		3ECA350728F89408002503DE /* SceneSplashScreen.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SceneSplashScreen.cpp; sourceTree = "<group>"; };
+		3ECA350828F89408002503DE /* SceneSplashScreen.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SceneSplashScreen.hpp; sourceTree = "<group>"; };
+		3ECA350A28F89983002503DE /* SceneGame.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SceneGame.cpp; sourceTree = "<group>"; };
+		3ECA350B28F89983002503DE /* SceneGame.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SceneGame.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +90,13 @@
 				3ECA34FC28F87DBC002503DE /* Bitmask.hpp */,
 				3ECA34FE28F88128002503DE /* Input.cpp */,
 				3ECA34FF28F88128002503DE /* Input.hpp */,
+				3ECA350128F88A08002503DE /* Scene.hpp */,
+				3ECA350228F88C21002503DE /* SceneStateMachine.cpp */,
+				3ECA350328F88C21002503DE /* SceneStateMachine.hpp */,
+				3ECA350728F89408002503DE /* SceneSplashScreen.cpp */,
+				3ECA350828F89408002503DE /* SceneSplashScreen.hpp */,
+				3ECA350A28F89983002503DE /* SceneGame.cpp */,
+				3ECA350B28F89983002503DE /* SceneGame.hpp */,
 				3ECA34D328F7D62E002503DE /* main.cpp */,
 				3ECA34CE28F7D62E002503DE /* Supporting Files */,
 				3ECA34D528F7D62E002503DE /* Resources */,
@@ -96,6 +115,7 @@
 		3ECA34D528F7D62E002503DE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3ECA350528F893E9002503DE /* RhythmOfWar.jpg */,
 				3ECA34F128F7DC2B002503DE /* viking.png */,
 			);
 			path = Resources;
@@ -170,6 +190,7 @@
 			files = (
 				3ECA34FA28F7DF52002503DE /* game-engine-2d-Info.plist in Resources */,
 				3ECA34F228F7DC2B002503DE /* viking.png in Resources */,
+				3ECA350628F893E9002503DE /* RhythmOfWar.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,12 +221,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ECA350C28F89983002503DE /* SceneGame.cpp in Sources */,
 				3ECA350028F88128002503DE /* Input.cpp in Sources */,
 				3ECA34D428F7D62E002503DE /* main.cpp in Sources */,
+				3ECA350428F88C21002503DE /* SceneStateMachine.cpp in Sources */,
 				3ECA34E828F7D725002503DE /* Window.cpp in Sources */,
 				3ECA34E528F7D6DD002503DE /* Game.cpp in Sources */,
 				3ECA34EB28F7D8FC002503DE /* WorkingDirectory.cpp in Sources */,
 				3ECA34FD28F87DBC002503DE /* Bitmask.cpp in Sources */,
+				3ECA350928F89408002503DE /* SceneSplashScreen.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

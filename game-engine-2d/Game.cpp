@@ -9,45 +9,35 @@
 #include "Game.hpp"
 
 Game::Game(): window("2D Game Engine") {
-    vikingTexture.loadFromFile(workingDirectory.get() + "viking.png");
-    vikingSprite.setTexture(vikingTexture);
+    std::shared_ptr<SceneSplashScreen> splashScreen =
+        std::make_shared<SceneSplashScreen>(workingDirectory, sceneStateMachine, window);
+    std::shared_ptr<SceneGame> gameScene =
+        std::make_shared<SceneGame>(workingDirectory);
+    unsigned int splashScreenId = sceneStateMachine.add(splashScreen);
+    unsigned int gameSceneId = sceneStateMachine.add(gameScene);
+    splashScreen->setSwitchToScene(gameSceneId);
+    sceneStateMachine.switchTo(splashScreenId);
     deltaTime = clock.restart().asSeconds();
 }
 
 void Game::update()
 {
     window.update();
-    const sf::Vector2f &spritePos = vikingSprite.getPosition();
-    const int moveSpeed = 100;
-    int xMove = 0, yMove = 0;
-    
-    if (input.isKeyPressed(Input::Key::Left)) {
-        xMove = -moveSpeed;
-    } else if (input.isKeyPressed(Input::Key::Right)) {
-        xMove = moveSpeed;
-    }
-    
-    if (input.isKeyPressed(Input::Key::Up)) {
-        yMove = -moveSpeed;
-    } else if (input.isKeyPressed(Input::Key::Down)) {
-        yMove = moveSpeed;
-    }
-    
-    float xFrameMove = xMove * deltaTime;
-    float yFrameMove = yMove * deltaTime;
-    
-    vikingSprite.setPosition(spritePos.x + xFrameMove, spritePos.y + yFrameMove);
+    sceneStateMachine.update(deltaTime);
 }
+
+void Game::lateUpdate() {
+    sceneStateMachine.lateUpdate(deltaTime);
+}
+
 
 void Game::draw()
 {
     window.beginDraw();
-    window.draw(vikingSprite);
-    // We’ll add draw code here.
+    sceneStateMachine.draw(window);
     window.endDraw();
 }
 
-void Game::lateUpdate() { }
 
 bool Game::isRunning() const
 {
@@ -59,5 +49,5 @@ void Game::calculateDeltaTime() {
 }
 
 void Game::captureInput() {
-    input.update();
+    sceneStateMachine.processInput();
 }

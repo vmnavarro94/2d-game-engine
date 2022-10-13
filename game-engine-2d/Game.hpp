@@ -9,9 +9,12 @@
 #ifndef Game_hpp
 #define Game_hpp
 
-#include "Window.hpp"
-#include "Input.hpp"
+#include <SFML/Graphics.hpp>
 #include "WorkingDirectory.hpp"
+#include "Window.hpp"
+#include "SceneStateMachine.hpp"
+#include "SceneSplashScreen.hpp"
+#include "SceneGame.hpp"
 
 class Game
 {
@@ -26,10 +29,8 @@ public:
 private:
     Window window;
     WorkingDirectory workingDirectory;
-    sf::Texture vikingTexture;
-    sf::Sprite vikingSprite;
     sf::Clock clock;
     float deltaTime;
-    Input input;
+    SceneStateMachine sceneStateMachine;
 };
 #endif /* Game_hpp */
