@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E23C0E928F8C4A600114272 /* CSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E23C0E728F8C4A600114272 /* CSprite.cpp */; };
+		3E3BB2FA28F8B17D0042EE61 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E3BB2F828F8B17D0042EE61 /* Object.cpp */; };
 		3ECA34D428F7D62E002503DE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ECA34D328F7D62E002503DE /* main.cpp */; };
 		3ECA34E528F7D6DD002503DE /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ECA34E328F7D6DD002503DE /* Game.cpp */; };
 		3ECA34E828F7D725002503DE /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ECA34E628F7D725002503DE /* Window.cpp */; };
@@ -23,6 +25,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E23C0E728F8C4A600114272 /* CSprite.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CSprite.cpp; sourceTree = "<group>"; };
+		3E23C0E828F8C4A600114272 /* CSprite.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CSprite.hpp; sourceTree = "<group>"; };
+		3E3BB2F828F8B17D0042EE61 /* Object.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Object.cpp; sourceTree = "<group>"; };
+		3E3BB2F928F8B17D0042EE61 /* Object.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Object.hpp; sourceTree = "<group>"; };
+		3E3BB2FB28F8B2810042EE61 /* Component.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Component.hpp; sourceTree = "<group>"; };
 		3ECA34CB28F7D62E002503DE /* game-engine-2d.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "game-engine-2d.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ECA34D328F7D62E002503DE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		3ECA34E328F7D6DD002503DE /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
@@ -97,6 +104,11 @@
 				3ECA350828F89408002503DE /* SceneSplashScreen.hpp */,
 				3ECA350A28F89983002503DE /* SceneGame.cpp */,
 				3ECA350B28F89983002503DE /* SceneGame.hpp */,
+				3E3BB2F828F8B17D0042EE61 /* Object.cpp */,
+				3E3BB2F928F8B17D0042EE61 /* Object.hpp */,
+				3E3BB2FB28F8B2810042EE61 /* Component.hpp */,
+				3E23C0E728F8C4A600114272 /* CSprite.cpp */,
+				3E23C0E828F8C4A600114272 /* CSprite.hpp */,
 				3ECA34D328F7D62E002503DE /* main.cpp */,
 				3ECA34CE28F7D62E002503DE /* Supporting Files */,
 				3ECA34D528F7D62E002503DE /* Resources */,
@@ -224,11 +236,13 @@
 				3ECA350C28F89983002503DE /* SceneGame.cpp in Sources */,
 				3ECA350028F88128002503DE /* Input.cpp in Sources */,
 				3ECA34D428F7D62E002503DE /* main.cpp in Sources */,
+				3E23C0E928F8C4A600114272 /* CSprite.cpp in Sources */,
 				3ECA350428F88C21002503DE /* SceneStateMachine.cpp in Sources */,
 				3ECA34E828F7D725002503DE /* Window.cpp in Sources */,
 				3ECA34E528F7D6DD002503DE /* Game.cpp in Sources */,
 				3ECA34EB28F7D8FC002503DE /* WorkingDirectory.cpp in Sources */,
 				3ECA34FD28F87DBC002503DE /* Bitmask.cpp in Sources */,
+				3E3BB2FA28F8B17D0042EE61 /* Object.cpp in Sources */,
 				3ECA350928F89408002503DE /* SceneSplashScreen.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
