@@ -14,6 +14,7 @@
 #include "WorkingDirectory.hpp"
 #include "Object.hpp"
 #include "CSprite.hpp"
+#include "CKeyboardMovement.hpp"
 
 class SceneGame : public Scene {
 public:
@@ -22,6 +23,7 @@ public:
     void onDestroy() override;
     void processInput() override;
     void update(float deltaTime) override;
+    void lateUpdate(float deltaTime) override;
     void draw(Window& window) override;
     
 private:

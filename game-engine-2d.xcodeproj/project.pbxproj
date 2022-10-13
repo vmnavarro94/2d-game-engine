@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3E23C0E928F8C4A600114272 /* CSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E23C0E728F8C4A600114272 /* CSprite.cpp */; };
+		3E23C0EE28F8C7B700114272 /* CSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E23C0EC28F8C7B700114272 /* CSprite.cpp */; };
+		3E23C0F728F8C96100114272 /* CTransform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E23C0F528F8C96100114272 /* CTransform.cpp */; };
+		3E23C0FA28F8D02A00114272 /* CKeyboardMovement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E23C0F828F8D02A00114272 /* CKeyboardMovement.cpp */; };
 		3E3BB2FA28F8B17D0042EE61 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E3BB2F828F8B17D0042EE61 /* Object.cpp */; };
 		3ECA34D428F7D62E002503DE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ECA34D328F7D62E002503DE /* main.cpp */; };
 		3ECA34E528F7D6DD002503DE /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ECA34E328F7D6DD002503DE /* Game.cpp */; };
@@ -25,8 +27,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3E23C0E728F8C4A600114272 /* CSprite.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CSprite.cpp; sourceTree = "<group>"; };
-		3E23C0E828F8C4A600114272 /* CSprite.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CSprite.hpp; sourceTree = "<group>"; };
+		3E23C0EC28F8C7B700114272 /* CSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CSprite.cpp; sourceTree = "<group>"; };
+		3E23C0ED28F8C7B700114272 /* CSprite.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CSprite.hpp; sourceTree = "<group>"; };
+		3E23C0F528F8C96100114272 /* CTransform.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CTransform.cpp; sourceTree = "<group>"; };
+		3E23C0F628F8C96100114272 /* CTransform.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CTransform.hpp; sourceTree = "<group>"; };
+		3E23C0F828F8D02A00114272 /* CKeyboardMovement.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CKeyboardMovement.cpp; sourceTree = "<group>"; };
+		3E23C0F928F8D02A00114272 /* CKeyboardMovement.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CKeyboardMovement.hpp; sourceTree = "<group>"; };
 		3E3BB2F828F8B17D0042EE61 /* Object.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Object.cpp; sourceTree = "<group>"; };
 		3E3BB2F928F8B17D0042EE61 /* Object.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Object.hpp; sourceTree = "<group>"; };
 		3E3BB2FB28F8B2810042EE61 /* Component.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Component.hpp; sourceTree = "<group>"; };
@@ -67,6 +73,68 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E23C0EF28F8C7F700114272 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				3E23C0EC28F8C7B700114272 /* CSprite.cpp */,
+				3E23C0ED28F8C7B700114272 /* CSprite.hpp */,
+				3E23C0F528F8C96100114272 /* CTransform.cpp */,
+				3E23C0F628F8C96100114272 /* CTransform.hpp */,
+				3E23C0F828F8D02A00114272 /* CKeyboardMovement.cpp */,
+				3E23C0F928F8D02A00114272 /* CKeyboardMovement.hpp */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		3E23C0F028F8C85600114272 /* ObjectComponent */ = {
+			isa = PBXGroup;
+			children = (
+				3E3BB2F828F8B17D0042EE61 /* Object.cpp */,
+				3E3BB2F928F8B17D0042EE61 /* Object.hpp */,
+				3E3BB2FB28F8B2810042EE61 /* Component.hpp */,
+			);
+			path = ObjectComponent;
+			sourceTree = "<group>";
+		};
+		3E23C0F128F8C89000114272 /* Bitmask */ = {
+			isa = PBXGroup;
+			children = (
+				3ECA34FB28F87DBC002503DE /* Bitmask.cpp */,
+				3ECA34FC28F87DBC002503DE /* Bitmask.hpp */,
+			);
+			path = Bitmask;
+			sourceTree = "<group>";
+		};
+		3E23C0F228F8C8B400114272 /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				3ECA34FE28F88128002503DE /* Input.cpp */,
+				3ECA34FF28F88128002503DE /* Input.hpp */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
+		3E23C0F328F8C8CE00114272 /* SceneHandling */ = {
+			isa = PBXGroup;
+			children = (
+				3ECA350128F88A08002503DE /* Scene.hpp */,
+				3ECA350228F88C21002503DE /* SceneStateMachine.cpp */,
+				3ECA350328F88C21002503DE /* SceneStateMachine.hpp */,
+				3ECA34E628F7D725002503DE /* Window.cpp */,
+				3ECA34E728F7D725002503DE /* Window.hpp */,
+			);
+			path = SceneHandling;
+			sourceTree = "<group>";
+		};
+		3E23C0F428F8C8F200114272 /* WorkingDirectory */ = {
+			isa = PBXGroup;
+			children = (
+				3ECA34E928F7D8FC002503DE /* WorkingDirectory.cpp */,
+				3ECA34EA28F7D8FC002503DE /* WorkingDirectory.hpp */,
+			);
+			path = WorkingDirectory;
+			sourceTree = "<group>";
+		};
 		3ECA34C128F7D62E002503DE = {
 			isa = PBXGroup;
 			children = (
@@ -89,27 +157,17 @@
 			children = (
 				3ECA34E328F7D6DD002503DE /* Game.cpp */,
 				3ECA34E428F7D6DD002503DE /* Game.hpp */,
-				3ECA34E628F7D725002503DE /* Window.cpp */,
-				3ECA34E728F7D725002503DE /* Window.hpp */,
-				3ECA34E928F7D8FC002503DE /* WorkingDirectory.cpp */,
-				3ECA34EA28F7D8FC002503DE /* WorkingDirectory.hpp */,
-				3ECA34FB28F87DBC002503DE /* Bitmask.cpp */,
-				3ECA34FC28F87DBC002503DE /* Bitmask.hpp */,
-				3ECA34FE28F88128002503DE /* Input.cpp */,
-				3ECA34FF28F88128002503DE /* Input.hpp */,
-				3ECA350128F88A08002503DE /* Scene.hpp */,
-				3ECA350228F88C21002503DE /* SceneStateMachine.cpp */,
-				3ECA350328F88C21002503DE /* SceneStateMachine.hpp */,
 				3ECA350728F89408002503DE /* SceneSplashScreen.cpp */,
 				3ECA350828F89408002503DE /* SceneSplashScreen.hpp */,
 				3ECA350A28F89983002503DE /* SceneGame.cpp */,
 				3ECA350B28F89983002503DE /* SceneGame.hpp */,
-				3E3BB2F828F8B17D0042EE61 /* Object.cpp */,
-				3E3BB2F928F8B17D0042EE61 /* Object.hpp */,
-				3E3BB2FB28F8B2810042EE61 /* Component.hpp */,
-				3E23C0E728F8C4A600114272 /* CSprite.cpp */,
-				3E23C0E828F8C4A600114272 /* CSprite.hpp */,
 				3ECA34D328F7D62E002503DE /* main.cpp */,
+				3E23C0F428F8C8F200114272 /* WorkingDirectory */,
+				3E23C0F328F8C8CE00114272 /* SceneHandling */,
+				3E23C0F228F8C8B400114272 /* Input */,
+				3E23C0F128F8C89000114272 /* Bitmask */,
+				3E23C0F028F8C85600114272 /* ObjectComponent */,
+				3E23C0EF28F8C7F700114272 /* Components */,
 				3ECA34CE28F7D62E002503DE /* Supporting Files */,
 				3ECA34D528F7D62E002503DE /* Resources */,
 			);
@@ -236,13 +294,15 @@
 				3ECA350C28F89983002503DE /* SceneGame.cpp in Sources */,
 				3ECA350028F88128002503DE /* Input.cpp in Sources */,
 				3ECA34D428F7D62E002503DE /* main.cpp in Sources */,
-				3E23C0E928F8C4A600114272 /* CSprite.cpp in Sources */,
+				3E23C0FA28F8D02A00114272 /* CKeyboardMovement.cpp in Sources */,
+				3E23C0EE28F8C7B700114272 /* CSprite.cpp in Sources */,
 				3ECA350428F88C21002503DE /* SceneStateMachine.cpp in Sources */,
 				3ECA34E828F7D725002503DE /* Window.cpp in Sources */,
 				3ECA34E528F7D6DD002503DE /* Game.cpp in Sources */,
 				3ECA34EB28F7D8FC002503DE /* WorkingDirectory.cpp in Sources */,
 				3ECA34FD28F87DBC002503DE /* Bitmask.cpp in Sources */,
 				3E3BB2FA28F8B17D0042EE61 /* Object.cpp in Sources */,
+				3E23C0F728F8C96100114272 /* CTransform.cpp in Sources */,
 				3ECA350928F89408002503DE /* SceneSplashScreen.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,10 @@
 
 #include "Object.hpp"
 
+Object::Object() {
+    transform = addComponent<CTransform>();
+}
+
 void Object::awake() {
     for(int i = components.size() - 1; i >= 0; i--) {
         components[i]->awake();

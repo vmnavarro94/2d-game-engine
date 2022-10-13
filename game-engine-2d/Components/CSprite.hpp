@@ -18,6 +18,8 @@ public:
     void load(const std::string& filePath);
     //Override the draw method in order to draw the sprite
     void draw(Window& window) override;
+    //Use this to update the sprite based on the position
+    void lateUpdate(float deltaTime) override;
     
 private:
     sf::Texture texture;

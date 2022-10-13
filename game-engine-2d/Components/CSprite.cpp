@@ -7,6 +7,7 @@
 //
 
 #include "CSprite.hpp"
+#include "Object.hpp"
 
 CSprite::CSprite(Object* owner) : Component(owner) {}
 
@@ -17,4 +18,8 @@ void CSprite::load(const std::string &filePath) {
 
 void CSprite::draw(Window &window) {
     window.draw(sprite);
+}
+
+void CSprite::lateUpdate(float deltaTime) {
+    sprite.setPosition(owner->transform->getPosition());
 }

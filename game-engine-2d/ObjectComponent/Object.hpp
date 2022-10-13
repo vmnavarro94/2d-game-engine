@@ -11,10 +11,12 @@
 
 #include "Window.hpp"
 #include "Component.hpp"
+#include "CTransform.hpp"
 #include <vector>
 
 class Object {
 public:
+    Object();
     //Awake is called when object created
     //Use to ensure required components are present.
     void awake();
@@ -24,6 +26,7 @@ public:
     void update(float deltaTime);
     void lateUpdate(float deltaTime);
     void draw(Window& window);
+    std::shared_ptr<CTransform> transform;
     
     template <typename T> std::shared_ptr<T> addComponent() {
         //Only a class that derives from Component can be added.

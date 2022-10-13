@@ -17,6 +17,9 @@ void SceneGame::onCreate() {
     // Adds a component by calling template function
     auto sprite = player->addComponent<CSprite>();
     sprite->load(workingDirectory.get() + "viking.png");
+    
+    auto movement = player->addComponent<CKeyboardMovement>();
+    movement->setInput(&input);
 }
 
 void SceneGame::onDestroy() {}
@@ -25,7 +28,13 @@ void SceneGame::processInput() {
     input.update();
 }
 
-void SceneGame::update(float deltaTime) {}
+void SceneGame::update(float deltaTime) {
+    player->update(deltaTime);
+}
+
+void SceneGame::lateUpdate(float deltaTime) {
+    player->lateUpdate(deltaTime);
+}
 
 void SceneGame::draw(Window &window) {
     player->draw(window);
