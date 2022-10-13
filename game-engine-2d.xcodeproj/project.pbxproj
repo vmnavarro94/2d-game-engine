@@ -15,6 +15,7 @@
 		3ECA34F228F7DC2B002503DE /* viking.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ECA34F128F7DC2B002503DE /* viking.png */; };
 		3ECA34FA28F7DF52002503DE /* game-engine-2d-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3ECA34F928F7DF52002503DE /* game-engine-2d-Info.plist */; };
 		3ECA34FD28F87DBC002503DE /* Bitmask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ECA34FB28F87DBC002503DE /* Bitmask.cpp */; };
+		3ECA350028F88128002503DE /* Input.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ECA34FE28F88128002503DE /* Input.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		3ECA34F928F7DF52002503DE /* game-engine-2d-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "game-engine-2d-Info.plist"; path = "game-engine-2d/game-engine-2d-Info.plist"; sourceTree = SOURCE_ROOT; };
 		3ECA34FB28F87DBC002503DE /* Bitmask.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Bitmask.cpp; sourceTree = "<group>"; };
 		3ECA34FC28F87DBC002503DE /* Bitmask.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Bitmask.hpp; sourceTree = "<group>"; };
+		3ECA34FE28F88128002503DE /* Input.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Input.cpp; sourceTree = "<group>"; };
+		3ECA34FF28F88128002503DE /* Input.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Input.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,9 +74,11 @@
 				3ECA34E728F7D725002503DE /* Window.hpp */,
 				3ECA34E928F7D8FC002503DE /* WorkingDirectory.cpp */,
 				3ECA34EA28F7D8FC002503DE /* WorkingDirectory.hpp */,
-				3ECA34D328F7D62E002503DE /* main.cpp */,
 				3ECA34FB28F87DBC002503DE /* Bitmask.cpp */,
 				3ECA34FC28F87DBC002503DE /* Bitmask.hpp */,
+				3ECA34FE28F88128002503DE /* Input.cpp */,
+				3ECA34FF28F88128002503DE /* Input.hpp */,
+				3ECA34D328F7D62E002503DE /* main.cpp */,
 				3ECA34CE28F7D62E002503DE /* Supporting Files */,
 				3ECA34D528F7D62E002503DE /* Resources */,
 			);
@@ -195,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ECA350028F88128002503DE /* Input.cpp in Sources */,
 				3ECA34D428F7D62E002503DE /* main.cpp in Sources */,
 				3ECA34E828F7D725002503DE /* Window.cpp in Sources */,
 				3ECA34E528F7D6DD002503DE /* Game.cpp in Sources */,

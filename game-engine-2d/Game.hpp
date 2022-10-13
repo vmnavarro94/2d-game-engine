@@ -8,7 +8,9 @@
 
 #ifndef Game_hpp
 #define Game_hpp
+
 #include "Window.hpp"
+#include "Input.hpp"
 #include "WorkingDirectory.hpp"
 
 class Game
@@ -20,6 +22,7 @@ public:
     void draw();
     bool isRunning() const;
     void calculateDeltaTime();
+    void captureInput();
 private:
     Window window;
     WorkingDirectory workingDirectory;
@@ -27,5 +30,6 @@ private:
     sf::Sprite vikingSprite;
     sf::Clock clock;
     float deltaTime;
+    Input input;
 };
 #endif /* Game_hpp */
