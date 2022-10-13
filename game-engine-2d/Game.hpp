@@ -19,10 +19,13 @@ public:
     void lateUpdate();
     void draw();
     bool isRunning() const;
+    void calculateDeltaTime();
 private:
     Window window;
     WorkingDirectory workingDirectory;
     sf::Texture vikingTexture;
     sf::Sprite vikingSprite;
+    sf::Clock clock;
+    float deltaTime;
 };
 #endif /* Game_hpp */

@@ -15,5 +15,6 @@ int main()
         game.update();
         game.lateUpdate();
         game.draw();
+        game.calculateDeltaTime();
     }
 }
