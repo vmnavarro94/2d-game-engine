@@ -10,12 +10,13 @@
 		3E23C0EE28F8C7B700114272 /* CSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E23C0EC28F8C7B700114272 /* CSprite.cpp */; };
 		3E23C0F728F8C96100114272 /* CTransform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E23C0F528F8C96100114272 /* CTransform.cpp */; };
 		3E23C0FA28F8D02A00114272 /* CKeyboardMovement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E23C0F828F8D02A00114272 /* CKeyboardMovement.cpp */; };
+		3E24373A28F8EC4200619A32 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECA34ED28F7DB70002503DE /* CoreFoundation.framework */; };
 		3E3BB2FA28F8B17D0042EE61 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E3BB2F828F8B17D0042EE61 /* Object.cpp */; };
+		3EB8BF9628F8E7E70015A042 /* ObjectCollection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EB8BF9428F8E7E70015A042 /* ObjectCollection.cpp */; };
 		3ECA34D428F7D62E002503DE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ECA34D328F7D62E002503DE /* main.cpp */; };
 		3ECA34E528F7D6DD002503DE /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ECA34E328F7D6DD002503DE /* Game.cpp */; };
 		3ECA34E828F7D725002503DE /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ECA34E628F7D725002503DE /* Window.cpp */; };
 		3ECA34EB28F7D8FC002503DE /* WorkingDirectory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ECA34E928F7D8FC002503DE /* WorkingDirectory.cpp */; };
-		3ECA34EE28F7DB70002503DE /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECA34ED28F7DB70002503DE /* CoreFoundation.framework */; };
 		3ECA34F228F7DC2B002503DE /* viking.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ECA34F128F7DC2B002503DE /* viking.png */; };
 		3ECA34FA28F7DF52002503DE /* game-engine-2d-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3ECA34F928F7DF52002503DE /* game-engine-2d-Info.plist */; };
 		3ECA34FD28F87DBC002503DE /* Bitmask.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ECA34FB28F87DBC002503DE /* Bitmask.cpp */; };
@@ -37,6 +38,8 @@
 		3E3BB2F828F8B17D0042EE61 /* Object.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Object.cpp; sourceTree = "<group>"; };
 		3E3BB2F928F8B17D0042EE61 /* Object.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Object.hpp; sourceTree = "<group>"; };
 		3E3BB2FB28F8B2810042EE61 /* Component.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Component.hpp; sourceTree = "<group>"; };
+		3EB8BF9428F8E7E70015A042 /* ObjectCollection.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ObjectCollection.cpp; sourceTree = "<group>"; };
+		3EB8BF9528F8E7E70015A042 /* ObjectCollection.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ObjectCollection.hpp; sourceTree = "<group>"; };
 		3ECA34CB28F7D62E002503DE /* game-engine-2d.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "game-engine-2d.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ECA34D328F7D62E002503DE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		3ECA34E328F7D6DD002503DE /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
@@ -67,7 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3ECA34EE28F7DB70002503DE /* CoreFoundation.framework in Frameworks */,
+				3E24373A28F8EC4200619A32 /* CoreFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -93,6 +96,8 @@
 				3E3BB2F828F8B17D0042EE61 /* Object.cpp */,
 				3E3BB2F928F8B17D0042EE61 /* Object.hpp */,
 				3E3BB2FB28F8B2810042EE61 /* Component.hpp */,
+				3EB8BF9428F8E7E70015A042 /* ObjectCollection.cpp */,
+				3EB8BF9528F8E7E70015A042 /* ObjectCollection.hpp */,
 			);
 			path = ObjectComponent;
 			sourceTree = "<group>";
@@ -313,6 +318,7 @@
 				3ECA34FD28F87DBC002503DE /* Bitmask.cpp in Sources */,
 				3E3BB2FA28F8B17D0042EE61 /* Object.cpp in Sources */,
 				3E23C0F728F8C96100114272 /* CTransform.cpp in Sources */,
+				3EB8BF9628F8E7E70015A042 /* ObjectCollection.cpp in Sources */,
 				3ECA350928F89408002503DE /* SceneSplashScreen.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,11 +420,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				EXCLUDED_ARCHS = arm64;
 				INFOPLIST_FILE = "game-engine-2d/game-engine-2d-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = game_engine_2d;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				OTHER_CFLAGS = (
 					"-D",
 					MACOS,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -429,11 +438,14 @@
 				CODE_SIGN_STYLE = Automatic;
 				EXCLUDED_ARCHS = arm64;
 				INFOPLIST_FILE = "game-engine-2d/game-engine-2d-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = game_engine_2d;
 				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				OTHER_CFLAGS = (
 					"-D",
 					MACOS,
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

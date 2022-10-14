@@ -27,6 +27,9 @@ public:
     void lateUpdate(float deltaTime);
     void draw(Window& window);
     std::shared_ptr<CTransform> transform;
+    bool isQueuedForRemoval();
+    void queueForRemoval();
+    
     
     template <typename T> std::shared_ptr<T> addComponent() {
         //Only a class that derives from Component can be added.
@@ -63,6 +66,7 @@ public:
     
 private:
     std::vector<std::shared_ptr<Component>> components;
+    bool queuedForRemoval;
 };
 
 #endif /* Object_hpp */

@@ -8,7 +8,7 @@
 
 #include "Object.hpp"
 
-Object::Object() {
+Object::Object() : queuedForRemoval(false) {
     transform = addComponent<CTransform>();
 }
 
@@ -40,4 +40,12 @@ void Object::draw(Window &window) {
     for(int i = components.size() - 1; i >= 0; i--) {
         components[i]->draw(window);
     }
+}
+
+void Object::queueForRemoval() {
+    queuedForRemoval = false;
+}
+
+bool Object::isQueuedForRemoval() {
+    return queuedForRemoval;
 }

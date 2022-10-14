@@ -16,6 +16,7 @@
 #include "CSprite.hpp"
 #include "CKeyboardMovement.hpp"
 #include "ResourceAllocator.hpp"
+#include "ObjectCollection.hpp"
 
 class SceneGame : public Scene {
 public:
@@ -29,10 +30,10 @@ public:
     void draw(Window& window) override;
     
 private:
-    std::shared_ptr<Object> player;
+    Input input;
+    ObjectCollection objects;
     WorkingDirectory& workingDirectory;
     ResourceAllocator<sf::Texture>& textureAllocator;
-    Input input;
 };
 
 #endif /* SceneGame_hpp */
