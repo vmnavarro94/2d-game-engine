@@ -12,12 +12,14 @@
 #include <SFML/Graphics.hpp>
 #include "SceneStateMachine.hpp"
 #include "WorkingDirectory.hpp"
+#include "ResourceAllocator.hpp"
 
 class SceneSplashScreen : public Scene {
 public:
     SceneSplashScreen(WorkingDirectory& workingDirectory,
                       SceneStateMachine& sceneStateMachine,
-                      Window& window);
+                      Window& window,
+                      ResourceAllocator<sf::Texture>& textureAllocator);
     void onCreate() override;
     void onDestroy() override;
     void onActivate() override;
@@ -30,6 +32,7 @@ private:
     sf::Sprite splashSprite;
     WorkingDirectory& workingDirectory;
     SceneStateMachine& sceneStateMachine;
+    ResourceAllocator<sf::Texture>& textureAllocator;
     Window& window;
     //This scene will be shown for a set amount of time
     float showForSeconds;

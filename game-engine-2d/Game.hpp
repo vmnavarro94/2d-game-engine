@@ -15,6 +15,7 @@
 #include "SceneStateMachine.hpp"
 #include "SceneSplashScreen.hpp"
 #include "SceneGame.hpp"
+#include "ResourceAllocator.hpp"
 
 class Game
 {
@@ -29,6 +30,8 @@ public:
 private:
     Window window;
     WorkingDirectory workingDirectory;
+    ResourceAllocator<sf::Texture> textureAllocator;
+
     sf::Clock clock;
     float deltaTime;
     SceneStateMachine sceneStateMachine;

@@ -15,10 +15,12 @@
 #include "Object.hpp"
 #include "CSprite.hpp"
 #include "CKeyboardMovement.hpp"
+#include "ResourceAllocator.hpp"
 
 class SceneGame : public Scene {
 public:
-    SceneGame(WorkingDirectory& workingDirectory);
+    SceneGame(WorkingDirectory& workingDirectory,
+              ResourceAllocator<sf::Texture>& textureAllocator);
     void onCreate() override;
     void onDestroy() override;
     void processInput() override;
@@ -29,6 +31,7 @@ public:
 private:
     std::shared_ptr<Object> player;
     WorkingDirectory& workingDirectory;
+    ResourceAllocator<sf::Texture>& textureAllocator;
     Input input;
 };
 

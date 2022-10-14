@@ -9,14 +9,14 @@
 #include "Game.hpp"
 
 Game::Game(): window("2D Game Engine") {
-    std::shared_ptr<SceneSplashScreen> splashScreen =
-        std::make_shared<SceneSplashScreen>(workingDirectory, sceneStateMachine, window);
-    std::shared_ptr<SceneGame> gameScene =
-        std::make_shared<SceneGame>(workingDirectory);
-    unsigned int splashScreenId = sceneStateMachine.add(splashScreen);
-    unsigned int gameSceneId = sceneStateMachine.add(gameScene);
-    splashScreen->setSwitchToScene(gameSceneId);
-    sceneStateMachine.switchTo(splashScreenId);
+    std::shared_ptr<SceneSplashScreen> splashScreen = std::make_shared<SceneSplashScreen>(workingDirectory, sceneStateMachine, window, textureAllocator);
+    std::shared_ptr<SceneGame> gameScene = std::make_shared<SceneGame>(workingDirectory, textureAllocator);
+    
+    unsigned int splashScreenID = sceneStateMachine.add(splashScreen);
+    unsigned int gameSceneID = sceneStateMachine.add(gameScene);
+    
+    splashScreen->setSwitchToScene(gameSceneID);
+    sceneStateMachine.switchTo(splashScreenID);
     deltaTime = clock.restart().asSeconds();
 }
 

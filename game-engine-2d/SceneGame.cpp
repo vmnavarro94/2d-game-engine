@@ -8,14 +8,14 @@
 
 #include "SceneGame.hpp"
 
-SceneGame::SceneGame(WorkingDirectory& workingDirectory)
-: workingDirectory(workingDirectory) {}
+SceneGame::SceneGame(WorkingDirectory& workingDirectory,
+                     ResourceAllocator<sf::Texture>& textureAllocator)
+: workingDirectory(workingDirectory), textureAllocator(textureAllocator) {}
 
 void SceneGame::onCreate() {
     player = std::make_shared<Object>();
-    
-    // Adds a component by calling template function
     auto sprite = player->addComponent<CSprite>();
+    sprite->setTextureAllocator(&textureAllocator);
     sprite->load(workingDirectory.get() + "viking.png");
     
     auto movement = player->addComponent<CKeyboardMovement>();

@@ -11,26 +11,31 @@
 SceneSplashScreen::SceneSplashScreen(
                     WorkingDirectory& workingDirectory,
                     SceneStateMachine& sceneStateMachine,
-                    Window& window)
+                    Window& window,
+                    ResourceAllocator<sf::Texture>& textureAllocator)
 : sceneStateMachine(sceneStateMachine),
     workingDirectory(workingDirectory),
     window(window),
     switchToState(0),
     currentSeconds(0.f),
-    showForSeconds(3.f) {}
+    showForSeconds(3.f),
+    textureAllocator(textureAllocator){}
 
 void SceneSplashScreen::onCreate() {
-    //Initialise splash screen image here
-    splashTexture.loadFromFile(workingDirectory.get() + "RhythmOfWar.jpg");
-    splashSprite.setTexture(splashTexture);
-    sf::FloatRect spriteSize = splashSprite.getLocalBounds();
-    //Set the origin of the sprite to the centre of the image
-    const float spriteScale = 0.15f;
-    splashSprite.setOrigin(spriteSize.width * 0.5f, spriteSize.height * 0.5f);
-    splashSprite.setScale(spriteScale, spriteScale);
-    sf::Vector2u windowCentre = window.getCentre();
-    //Positions sprite in centreof screen
-    splashSprite.setPosition(windowCentre.x, windowCentre.y);
+    int textureId = textureAllocator.add(workingDirectory.get() + "RhythmOfWar.jpg");
+    
+    if(textureId >= 0)
+    {
+        std::shared_ptr<sf::Texture> texture = textureAllocator.get(textureId);
+        splashSprite.setTexture(*texture);
+        
+        sf::FloatRect spriteSize = splashSprite.getLocalBounds();
+        splashSprite.setOrigin(spriteSize.width * 0.5f, spriteSize.height * 0.5f);
+        splashSprite.setScale(0.5f, 0.5f);
+        
+        sf::Vector2u windowCentre = window.getCentre();
+        splashSprite.setPosition(windowCentre.x, windowCentre.y);
+    }
 }
 
 void SceneSplashScreen::onActivate() {

@@ -10,19 +10,22 @@
 #define CSprite_hpp
 
 #include "Component.hpp"
+#include "ResourceAllocator.hpp"
 
 class CSprite : public Component {
 public:
     CSprite(Object* owner);
     //Loads a sprite from a file.
     void load(const std::string& filePath);
+    void load(int id);
+    void setTextureAllocator(ResourceAllocator<sf::Texture>* allocator);
     //Override the draw method in order to draw the sprite
     void draw(Window& window) override;
     //Use this to update the sprite based on the position
     void lateUpdate(float deltaTime) override;
     
 private:
-    sf::Texture texture;
+    ResourceAllocator<sf::Texture>* allocator;
     sf::Sprite sprite;
 };
 
