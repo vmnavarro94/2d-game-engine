@@ -32,10 +32,10 @@ void ObjectCollection::add(std::shared_ptr<Object> object) {
 
 void ObjectCollection::processNewObjects() {
     if (newObjects.size() > 0) {
-        for(auto& object : objects) {
+        for(auto& object : newObjects) {
             object->awake();
         }
-        for(auto& object : objects) {
+        for(auto& object : newObjects) {
             object->start();
         }
         objects.assign(newObjects.begin(), newObjects.end());

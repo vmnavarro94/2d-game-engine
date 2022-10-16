@@ -13,6 +13,8 @@
 		3E24373A28F8EC4200619A32 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3ECA34ED28F7DB70002503DE /* CoreFoundation.framework */; };
 		3E3BB2FA28F8B17D0042EE61 /* Object.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E3BB2F828F8B17D0042EE61 /* Object.cpp */; };
 		3EB8BF9628F8E7E70015A042 /* ObjectCollection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EB8BF9428F8E7E70015A042 /* ObjectCollection.cpp */; };
+		3EC7E1DF28F9F4A8001B62E8 /* Animation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EC7E1DD28F9F4A8001B62E8 /* Animation.cpp */; };
+		3EC7E1E228FA1E0D001B62E8 /* CAnimation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EC7E1E028FA1E0D001B62E8 /* CAnimation.cpp */; };
 		3ECA34D428F7D62E002503DE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ECA34D328F7D62E002503DE /* main.cpp */; };
 		3ECA34E528F7D6DD002503DE /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ECA34E328F7D6DD002503DE /* Game.cpp */; };
 		3ECA34E828F7D725002503DE /* Window.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ECA34E628F7D725002503DE /* Window.cpp */; };
@@ -40,6 +42,10 @@
 		3E3BB2FB28F8B2810042EE61 /* Component.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Component.hpp; sourceTree = "<group>"; };
 		3EB8BF9428F8E7E70015A042 /* ObjectCollection.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ObjectCollection.cpp; sourceTree = "<group>"; };
 		3EB8BF9528F8E7E70015A042 /* ObjectCollection.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ObjectCollection.hpp; sourceTree = "<group>"; };
+		3EC7E1DD28F9F4A8001B62E8 /* Animation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Animation.cpp; sourceTree = "<group>"; };
+		3EC7E1DE28F9F4A8001B62E8 /* Animation.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Animation.hpp; sourceTree = "<group>"; };
+		3EC7E1E028FA1E0D001B62E8 /* CAnimation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CAnimation.cpp; sourceTree = "<group>"; };
+		3EC7E1E128FA1E0D001B62E8 /* CAnimation.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CAnimation.hpp; sourceTree = "<group>"; };
 		3ECA34CB28F7D62E002503DE /* game-engine-2d.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "game-engine-2d.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ECA34D328F7D62E002503DE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		3ECA34E328F7D6DD002503DE /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
@@ -86,6 +92,8 @@
 				3E23C0F628F8C96100114272 /* CTransform.hpp */,
 				3E23C0F828F8D02A00114272 /* CKeyboardMovement.cpp */,
 				3E23C0F928F8D02A00114272 /* CKeyboardMovement.hpp */,
+				3EC7E1E028FA1E0D001B62E8 /* CAnimation.cpp */,
+				3EC7E1E128FA1E0D001B62E8 /* CAnimation.hpp */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -149,6 +157,15 @@
 			path = ResourceAllocator;
 			sourceTree = "<group>";
 		};
+		3EC7E1DC28F9F49B001B62E8 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				3EC7E1DD28F9F4A8001B62E8 /* Animation.cpp */,
+				3EC7E1DE28F9F4A8001B62E8 /* Animation.hpp */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
 		3ECA34C128F7D62E002503DE = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +193,7 @@
 				3ECA350A28F89983002503DE /* SceneGame.cpp */,
 				3ECA350B28F89983002503DE /* SceneGame.hpp */,
 				3ECA34D328F7D62E002503DE /* main.cpp */,
+				3EC7E1DC28F9F49B001B62E8 /* Animation */,
 				3E23C0FB28F8DA1700114272 /* ResourceAllocator */,
 				3E23C0F428F8C8F200114272 /* WorkingDirectory */,
 				3E23C0F328F8C8CE00114272 /* SceneHandling */,
@@ -308,6 +326,7 @@
 			files = (
 				3ECA350C28F89983002503DE /* SceneGame.cpp in Sources */,
 				3ECA350028F88128002503DE /* Input.cpp in Sources */,
+				3EC7E1E228FA1E0D001B62E8 /* CAnimation.cpp in Sources */,
 				3ECA34D428F7D62E002503DE /* main.cpp in Sources */,
 				3E23C0FA28F8D02A00114272 /* CKeyboardMovement.cpp in Sources */,
 				3E23C0EE28F8C7B700114272 /* CSprite.cpp in Sources */,
@@ -320,6 +339,7 @@
 				3E23C0F728F8C96100114272 /* CTransform.cpp in Sources */,
 				3EB8BF9628F8E7E70015A042 /* ObjectCollection.cpp in Sources */,
 				3ECA350928F89408002503DE /* SceneSplashScreen.cpp in Sources */,
+				3EC7E1DF28F9F4A8001B62E8 /* Animation.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

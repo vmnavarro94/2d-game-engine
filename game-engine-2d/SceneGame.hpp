@@ -17,6 +17,7 @@
 #include "CKeyboardMovement.hpp"
 #include "ResourceAllocator.hpp"
 #include "ObjectCollection.hpp"
+#include "CAnimation.hpp"
 
 class SceneGame : public Scene {
 public:

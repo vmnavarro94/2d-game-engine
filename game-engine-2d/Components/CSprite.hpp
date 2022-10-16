@@ -10,6 +10,7 @@
 #define CSprite_hpp
 
 #include "Component.hpp"
+#include "CTransform.hpp"
 #include "ResourceAllocator.hpp"
 
 class CSprite : public Component {
@@ -19,6 +20,8 @@ public:
     void load(const std::string& filePath);
     void load(int id);
     void setTextureAllocator(ResourceAllocator<sf::Texture>* allocator);
+    void setTextureRect(int x, int y, int width, int height);
+    void setTextureRect(const sf::IntRect& rect);
     //Override the draw method in order to draw the sprite
     void draw(Window& window) override;
     //Use this to update the sprite based on the position
@@ -26,6 +29,7 @@ public:
     
 private:
     ResourceAllocator<sf::Texture>* allocator;
+    int currentTextureId;
     sf::Sprite sprite;
 };
 
