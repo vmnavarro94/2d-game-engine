@@ -22,6 +22,7 @@ public:
     void setTextureAllocator(ResourceAllocator<sf::Texture>* allocator);
     void setTextureRect(int x, int y, int width, int height);
     void setTextureRect(const sf::IntRect& rect);
+    void setScale(float x, float y);
     //Override the draw method in order to draw the sprite
     void draw(Window& window) override;
     //Use this to update the sprite based on the position

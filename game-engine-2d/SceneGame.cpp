@@ -10,7 +10,7 @@
 
 SceneGame::SceneGame(WorkingDirectory& workingDirectory,
                      ResourceAllocator<sf::Texture>& textureAllocator)
-: workingDirectory(workingDirectory), textureAllocator(textureAllocator) {}
+    : workingDirectory(workingDirectory), textureAllocator(textureAllocator), mapParser(textureAllocator) {}
 
 void SceneGame::onCreate() {
     std::shared_ptr<Object> player = std::make_shared<Object>();
@@ -48,6 +48,12 @@ void SceneGame::onCreate() {
     animation->addAnimation(AnimationState::Walk, walkAnimation);
     
     objects.add(player);
+    
+    sf::Vector2i mapOffset(-100,128);
+    const std::string workingDir = workingDirectory.get();
+    std::vector<std::shared_ptr<Object>> levelTiles = mapParser.parse(workingDirectory.get() + "TestMap1.tmx", mapOffset);
+    
+    objects.add(levelTiles);
 }
 
 void SceneGame::onDestroy() {}

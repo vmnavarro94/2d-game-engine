@@ -18,6 +18,7 @@
 #include "ResourceAllocator.hpp"
 #include "ObjectCollection.hpp"
 #include "CAnimation.hpp"
+#include "TileMapParser.hpp"
 
 class SceneGame : public Scene {
 public:
@@ -32,6 +33,7 @@ public:
     
 private:
     Input input;
+    TileMapParser mapParser;
     ObjectCollection objects;
     WorkingDirectory& workingDirectory;
     ResourceAllocator<sf::Texture>& textureAllocator;
