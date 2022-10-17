@@ -30,13 +30,22 @@ void SceneGame::onCreate() {
     const int frameHeight = 145;
     //ENDTODO
     
-    std::shared_ptr<Animation> idleAnimation = std::make_shared<Animation>();
+    std::shared_ptr<Animation> idleAnimation = std::make_shared<Animation>(FacingDirection::Right);
     const float idleAnimFrameSeconds = 0.2f;
     idleAnimation->addFrame(vikingTextureId, 600, 0, frameWidth, frameHeight, idleAnimFrameSeconds);
     idleAnimation->addFrame(vikingTextureId, 800, 0, frameWidth, frameHeight, idleAnimFrameSeconds);
     idleAnimation->addFrame(vikingTextureId, 0, 145, frameWidth, frameHeight, idleAnimFrameSeconds);
     idleAnimation->addFrame(vikingTextureId, 200, 145, frameWidth, frameHeight, idleAnimFrameSeconds);
     animation->addAnimation(AnimationState::Idle, idleAnimation);
+    
+    std::shared_ptr<Animation> walkAnimation = std::make_shared<Animation>(FacingDirection::Right);
+    const float walkAnimFrameSeconds = 0.15f;
+    walkAnimation->addFrame(vikingTextureId, 600, 290, frameWidth, frameHeight, walkAnimFrameSeconds);
+    walkAnimation->addFrame(vikingTextureId, 800, 290, frameWidth, frameHeight, walkAnimFrameSeconds);
+    walkAnimation->addFrame(vikingTextureId, 0, 435, frameWidth, frameHeight, walkAnimFrameSeconds);
+    walkAnimation->addFrame(vikingTextureId, 200, 435, frameWidth, frameHeight, walkAnimFrameSeconds);
+    walkAnimation->addFrame(vikingTextureId, 400, 435, frameWidth, frameHeight, walkAnimFrameSeconds);
+    animation->addAnimation(AnimationState::Walk, walkAnimation);
     
     objects.add(player);
 }

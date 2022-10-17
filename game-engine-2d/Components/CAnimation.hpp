@@ -30,6 +30,7 @@ public:
     void setAnimationState(AnimationState state);
     //Returns current animation state
     const AnimationState& getAnimationState() const;
+    void setAnimationDirection(FacingDirection direction);
     
 private:
     std::shared_ptr<CSprite> sprite;

@@ -8,7 +8,7 @@
 
 #include "Animation.hpp"
 
-Animation::Animation() : frames(0), currentFrameIndex(0), currentFrameTime(0.f) {}
+Animation::Animation(FacingDirection direction) : frames(0), currentFrameIndex(0), currentFrameTime(0.f), direction(direction) {}
 
 void Animation::addFrame(int textureId, int x, int y, int width, int height, float frameTime) {
     FrameData data;
@@ -48,4 +48,18 @@ void Animation::incrementFrame() {
 void Animation::reset() {
     currentFrameIndex = 0;
     currentFrameTime = 0.f;
+}
+
+void Animation::setDirection(FacingDirection direction) {
+    if(this->direction != direction) {
+        this->direction = direction;
+        for(auto& frame : frames) {
+            frame.x += frame.width;
+            frame.width *= -1;
+        }
+    }
+}
+
+FacingDirection Animation::getDirection() const {
+    return direction;
 }

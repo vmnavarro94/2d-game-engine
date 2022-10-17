@@ -21,9 +21,17 @@ struct FrameData
     float displayTimeSeconds;   // How long to display the frame.
 };
 
+enum class FacingDirection {
+    None,
+    Left,
+    Right,
+};
+
 class Animation {
 public:
-    Animation();
+    Animation(FacingDirection direction);
+    void setDirection(FacingDirection direction);
+    FacingDirection getDirection() const;
     void addFrame(int textureId,
                   int x, int y,
                   int width, int height,
@@ -34,6 +42,7 @@ public:
     
 private:
     void incrementFrame();
+    FacingDirection direction;
     //Stores all frames for the animation
     std::vector<FrameData> frames;
     //Current frame

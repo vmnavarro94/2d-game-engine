@@ -11,6 +11,7 @@
 
 #include "Component.hpp"
 #include "Input.hpp"
+#include "CAnimation.hpp"
 
 class CKeyboardMovement : public Component {
 public:
@@ -18,10 +19,12 @@ public:
     void setInput(Input* input);
     void setMovementSpeed(int moveSpeed);
     void update(float deltaTime) override;
+    void awake() override;
     
 private:
     int moveSpeed;
     Input* input;
+    std::shared_ptr<CAnimation> animation;
 };
 
 #endif /* CKeyboardMovement_hpp */

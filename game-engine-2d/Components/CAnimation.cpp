@@ -57,3 +57,10 @@ const AnimationState& CAnimation::getAnimationState() const {
     //This can be use to compare the objects current state to a desired one
     return currentAnimation.first;
 }
+
+void CAnimation::setAnimationDirection(FacingDirection direction) {
+    if(currentAnimation.first != AnimationState::None) {
+        currentAnimation.second->setDirection(direction);
+        currentAnimation.second->setDirection(direction);
+    }
+}
