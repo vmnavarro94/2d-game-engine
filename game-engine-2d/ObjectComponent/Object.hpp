@@ -12,6 +12,7 @@
 #include "Window.hpp"
 #include "Component.hpp"
 #include "CTransform.hpp"
+#include "CDrawable.hpp"
 #include <vector>
 
 class Object {
@@ -50,6 +51,10 @@ public:
         std::shared_ptr<T> newComponent = std::make_shared<T>(this);
         components.push_back(newComponent);
         
+        if (std::dynamic_pointer_cast<CDrawable>(newComponent)) {
+            drawable = std::dynamic_pointer_cast<CDrawable>(newComponent);
+        }
+        
         return newComponent;
     };
     
@@ -64,8 +69,11 @@ public:
         return nullptr;
     }
     
+    std::shared_ptr<CDrawable> getDrawable();
+    
 private:
     std::vector<std::shared_ptr<Component>> components;
+    std::shared_ptr<CDrawable> drawable;
     bool queuedForRemoval;
 };
 

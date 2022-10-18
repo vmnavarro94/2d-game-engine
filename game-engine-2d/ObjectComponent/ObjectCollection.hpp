@@ -12,6 +12,7 @@
 #include <memory>
 #include <vector>
 #include "Object.hpp"
+#include "DrawableSystem.hpp"
 
 class ObjectCollection {
 public:
@@ -24,6 +25,7 @@ public:
     void processRemovals();
     
 private:
+    DrawableSystem drawables;
     std::vector<std::shared_ptr<Object>> objects;
     std::vector<std::shared_ptr<Object>> newObjects;
 };

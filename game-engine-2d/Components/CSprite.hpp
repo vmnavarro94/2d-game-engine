@@ -11,9 +11,10 @@
 
 #include "Component.hpp"
 #include "CTransform.hpp"
+#include "CDrawable.hpp"
 #include "ResourceAllocator.hpp"
 
-class CSprite : public Component {
+class CSprite : public Component, public CDrawable {
 public:
     CSprite(Object* owner);
     //Loads a sprite from a file.

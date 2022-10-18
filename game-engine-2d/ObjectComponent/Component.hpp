@@ -19,9 +19,7 @@ public:
     virtual void awake() {};
     virtual void start() {};
     virtual void update(float deltaTime) {};
-    virtual void lateUpdate(float deltaTime) {};
-    virtual void draw(Window& window) {};
-    
+    virtual void lateUpdate(float deltaTime) {};    
 protected:
     Object* owner;
 };

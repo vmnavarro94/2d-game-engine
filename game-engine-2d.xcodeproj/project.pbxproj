@@ -30,6 +30,10 @@
 		3ECA350628F893E9002503DE /* RhythmOfWar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3ECA350528F893E9002503DE /* RhythmOfWar.jpg */; };
 		3ECA350928F89408002503DE /* SceneSplashScreen.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ECA350728F89408002503DE /* SceneSplashScreen.cpp */; };
 		3ECA350C28F89983002503DE /* SceneGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3ECA350A28F89983002503DE /* SceneGame.cpp */; };
+		3EE7CB2128FE17E900A94ECE /* RedSquare.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EE7CB2028FE17E900A94ECE /* RedSquare.png */; };
+		3EE7CB2328FE183200A94ECE /* TestMap2.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 3EE7CB2228FE183200A94ECE /* TestMap2.tmx */; };
+		3EE7CB2628FE1FA400A94ECE /* CDrawable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EE7CB2428FE1FA400A94ECE /* CDrawable.cpp */; };
+		3EE7CB2928FE23DF00A94ECE /* DrawableSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EE7CB2728FE23DF00A94ECE /* DrawableSystem.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +86,12 @@
 		3ECA350828F89408002503DE /* SceneSplashScreen.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SceneSplashScreen.hpp; sourceTree = "<group>"; };
 		3ECA350A28F89983002503DE /* SceneGame.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SceneGame.cpp; sourceTree = "<group>"; };
 		3ECA350B28F89983002503DE /* SceneGame.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SceneGame.hpp; sourceTree = "<group>"; };
+		3EE7CB2028FE17E900A94ECE /* RedSquare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedSquare.png; sourceTree = "<group>"; };
+		3EE7CB2228FE183200A94ECE /* TestMap2.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = TestMap2.tmx; sourceTree = "<group>"; };
+		3EE7CB2428FE1FA400A94ECE /* CDrawable.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CDrawable.cpp; sourceTree = "<group>"; };
+		3EE7CB2528FE1FA400A94ECE /* CDrawable.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CDrawable.hpp; sourceTree = "<group>"; };
+		3EE7CB2728FE23DF00A94ECE /* DrawableSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DrawableSystem.cpp; sourceTree = "<group>"; };
+		3EE7CB2828FE23DF00A94ECE /* DrawableSystem.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DrawableSystem.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +117,10 @@
 				3E23C0F928F8D02A00114272 /* CKeyboardMovement.hpp */,
 				3EC7E1E028FA1E0D001B62E8 /* CAnimation.cpp */,
 				3EC7E1E128FA1E0D001B62E8 /* CAnimation.hpp */,
+				3EE7CB2428FE1FA400A94ECE /* CDrawable.cpp */,
+				3EE7CB2528FE1FA400A94ECE /* CDrawable.hpp */,
+				3EE7CB2728FE23DF00A94ECE /* DrawableSystem.cpp */,
+				3EE7CB2828FE23DF00A94ECE /* DrawableSystem.hpp */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -249,7 +263,9 @@
 			children = (
 				3EB54A0228FCDF8C009ACDFE /* JungleTiles.png */,
 				3EB54A0328FCDF8C009ACDFE /* TestMap1.tmx */,
+				3EE7CB2228FE183200A94ECE /* TestMap2.tmx */,
 				3ECA350528F893E9002503DE /* RhythmOfWar.jpg */,
+				3EE7CB2028FE17E900A94ECE /* RedSquare.png */,
 				3ECA34F128F7DC2B002503DE /* viking.png */,
 			);
 			path = Resources;
@@ -322,11 +338,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EE7CB2128FE17E900A94ECE /* RedSquare.png in Resources */,
 				3EB54A0428FCDF8C009ACDFE /* JungleTiles.png in Resources */,
 				3ECA34FA28F7DF52002503DE /* game-engine-2d-Info.plist in Resources */,
 				3ECA34F228F7DC2B002503DE /* viking.png in Resources */,
 				3EB54A0528FCDF8C009ACDFE /* TestMap1.tmx in Resources */,
 				3ECA350628F893E9002503DE /* RhythmOfWar.jpg in Resources */,
+				3EE7CB2328FE183200A94ECE /* TestMap2.tmx in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +378,7 @@
 				3ECA350C28F89983002503DE /* SceneGame.cpp in Sources */,
 				3ECA350028F88128002503DE /* Input.cpp in Sources */,
 				3EC7E1E228FA1E0D001B62E8 /* CAnimation.cpp in Sources */,
+				3EE7CB2628FE1FA400A94ECE /* CDrawable.cpp in Sources */,
 				3ECA34D428F7D62E002503DE /* main.cpp in Sources */,
 				3E23C0FA28F8D02A00114272 /* CKeyboardMovement.cpp in Sources */,
 				3E23C0EE28F8C7B700114272 /* CSprite.cpp in Sources */,
@@ -368,6 +387,7 @@
 				3ECA34E528F7D6DD002503DE /* Game.cpp in Sources */,
 				3ECA34EB28F7D8FC002503DE /* WorkingDirectory.cpp in Sources */,
 				3ECA34FD28F87DBC002503DE /* Bitmask.cpp in Sources */,
+				3EE7CB2928FE23DF00A94ECE /* DrawableSystem.cpp in Sources */,
 				3E3BB2FA28F8B17D0042EE61 /* Object.cpp in Sources */,
 				3E23C0F728F8C96100114272 /* CTransform.cpp in Sources */,
 				3EB8BF9628F8E7E70015A042 /* ObjectCollection.cpp in Sources */,
