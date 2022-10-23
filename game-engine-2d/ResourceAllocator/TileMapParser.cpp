@@ -28,7 +28,7 @@ std::vector<std::shared_ptr<Object>> TileMapParser::parse(const std::string& fil
     doc.parse<0>(xmlFile.data());
     xml_node<>* rootNode = doc.first_node("map");
     
-    std::shared_ptr<MapTiles> tiles = buildMapTiles(rootNode);
+    std::shared_ptr<MapTiles> map = buildMapTiles(rootNode);
     
     int tileSizeX = std::atoi(rootNode->first_attribute("tilewidth")->value());
     int tileSizeY = std::atoi(rootNode->first_attribute("tileheight")->value());
@@ -37,10 +37,10 @@ std::vector<std::shared_ptr<Object>> TileMapParser::parse(const std::string& fil
     
     std::vector<std::shared_ptr<Object>> tileObjects;
     
-    int layerCount = tiles->size() - 1;
-    for (const auto& layer : *tiles)
+    int layerCount = map->size() - 1;
+    for (const auto layer : *map)
     {
-        for (const auto& tile : *layer.second)
+        for (const auto tile : layer.second->tiles)
         {
             std::shared_ptr<TileInfo> tileInfo = tile->properties;
             
@@ -48,12 +48,14 @@ std::vector<std::shared_ptr<Object>> TileMapParser::parse(const std::string& fil
            
             const unsigned int tileScale = 3;
             
-            auto sprite = tileObject->addComponent<CSprite>();
-            sprite->setTextureAllocator(&textureAllocator);
-            sprite->load(tileInfo->textureId);
-            sprite->setTextureRect(tileInfo->textureRect);
-            sprite->setScale(tileScale, tileScale);
-            sprite->setSortOrder(layerCount);
+            if (layer.second->isVisible) {
+                auto sprite = tileObject->addComponent<CSprite>();
+                sprite->setTextureAllocator(&textureAllocator);
+                sprite->load(tileInfo->textureId);
+                sprite->setTextureRect(tileInfo->textureRect);
+                sprite->setScale(tileScale, tileScale);
+                sprite->setSortOrder(layerCount);
+            }
             
             float x = (tile->x * tileSizeX * (int)tileScale) + offset.x;
             float y = tile->y * tileSizeY * (int)tileScale + offset.y;
@@ -123,7 +125,9 @@ std::pair<std::string, std::shared_ptr<Layer>> TileMapParser::buildLayer(xml_nod
             substr.erase(std::remove(substr.begin(), substr.end(), '\n'), substr.end());
             //TODO: add check to confirm the character removals worked
         }
+        
         int tileId = std::stoi(substr);
+        
         if (tileId != 0) {
             auto itr = tileSet.find(tileId);
             if (itr == tileSet.end()) {
@@ -160,10 +164,19 @@ std::pair<std::string, std::shared_ptr<Layer>> TileMapParser::buildLayer(xml_nod
             tile->properties = itr->second;
             tile->x = count % width - 1;
             tile->y = count / width;
-            layer->emplace_back(tile);
+            layer->tiles.emplace_back(tile);
         }
         count++;
     }
     const std::string layerName = layerNode->first_attribute("name")->value();
+    
+    bool layerVisible = true;
+    xml_attribute<>* visibleAttribute = layerNode->first_attribute("visible");
+    
+    if (visibleAttribute) {
+        layerVisible = std::stoi(visibleAttribute->value());
+    }
+    layer->isVisible = layerVisible;
+    
     return std::make_pair(layerName, layer);
 }
