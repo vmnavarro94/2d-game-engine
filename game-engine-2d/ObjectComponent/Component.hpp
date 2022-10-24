@@ -20,7 +20,6 @@ public:
     virtual void start() {};
     virtual void update(float deltaTime) {};
     virtual void lateUpdate(float deltaTime) {};    
-protected:
     Object* owner;
 };
 

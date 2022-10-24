@@ -13,6 +13,7 @@
 #include "Component.hpp"
 #include "CTransform.hpp"
 #include "CDrawable.hpp"
+#include "CInstanceId.hpp"
 #include <vector>
 
 class Object {
@@ -30,6 +31,7 @@ public:
     std::shared_ptr<CTransform> transform;
     bool isQueuedForRemoval();
     void queueForRemoval();
+    std::shared_ptr<CInstanceId> instanceId;
     
     
     template <typename T> std::shared_ptr<T> addComponent() {

@@ -10,6 +10,7 @@
 
 Object::Object() : queuedForRemoval(false) {
     transform = addComponent<CTransform>();
+    instanceId = addComponent<CInstanceId>();
 }
 
 void Object::awake() {
