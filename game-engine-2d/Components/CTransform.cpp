@@ -9,7 +9,7 @@
 #include "CTransform.hpp"
 
 CTransform::CTransform(Object* owner)
-    : Component(owner), position(0.f, 0.f) {}
+    : Component(owner), position(0.f, 0.f), isStaticTransform(false) {}
 
 void CTransform::setPosition(float x, float y) {
     position.x = x;
@@ -47,4 +47,12 @@ void CTransform::addY(float y) {
 
 const sf::Vector2f& CTransform::getPosition() const {
     return position;
+}
+
+void CTransform::setStatic(bool isStatic) {
+    isStaticTransform = isStatic;
+}
+
+bool CTransform::isStatic() {
+    return isStaticTransform;
 }

@@ -18,7 +18,8 @@ public:
     void setPosition(sf::Vector2f pos);
     void addPosition(float x, float y);
     void addPosition(sf::Vector2f pos);
-    // Allow to set x/y values individually
+    void setStatic(bool isStatic);
+    bool isStatic();
     void setX(float x);
     void setY(float y);
     void addX(float x);
@@ -27,6 +28,7 @@ public:
     
 private:
     sf::Vector2f position;
+    bool isStaticTransform;
 };
 
 #endif /* CTransform_hpp */

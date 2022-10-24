@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28CA044C290628DA009C2813 /* CCollider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28CA044A290628DA009C2813 /* CCollider.cpp */; };
+		28CA044F29062B3A009C2813 /* CBoxCollider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28CA044D29062B3A009C2813 /* CBoxCollider.cpp */; };
 		3E23C0EE28F8C7B700114272 /* CSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E23C0EC28F8C7B700114272 /* CSprite.cpp */; };
 		3E23C0F728F8C96100114272 /* CTransform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E23C0F528F8C96100114272 /* CTransform.cpp */; };
 		3E23C0FA28F8D02A00114272 /* CKeyboardMovement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E23C0F828F8D02A00114272 /* CKeyboardMovement.cpp */; };
@@ -37,6 +39,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		28CA044A290628DA009C2813 /* CCollider.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CCollider.cpp; sourceTree = "<group>"; };
+		28CA044B290628DA009C2813 /* CCollider.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CCollider.hpp; sourceTree = "<group>"; };
+		28CA044D29062B3A009C2813 /* CBoxCollider.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CBoxCollider.cpp; sourceTree = "<group>"; };
+		28CA044E29062B3A009C2813 /* CBoxCollider.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CBoxCollider.hpp; sourceTree = "<group>"; };
 		3E23C0EC28F8C7B700114272 /* CSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CSprite.cpp; sourceTree = "<group>"; };
 		3E23C0ED28F8C7B700114272 /* CSprite.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CSprite.hpp; sourceTree = "<group>"; };
 		3E23C0F528F8C96100114272 /* CTransform.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CTransform.cpp; sourceTree = "<group>"; };
@@ -106,9 +112,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28CA0449290628AF009C2813 /* Collision */ = {
+			isa = PBXGroup;
+			children = (
+				28CA044D29062B3A009C2813 /* CBoxCollider.cpp */,
+				28CA044E29062B3A009C2813 /* CBoxCollider.hpp */,
+			);
+			path = Collision;
+			sourceTree = "<group>";
+		};
 		3E23C0EF28F8C7F700114272 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				28CA0449290628AF009C2813 /* Collision */,
 				3E23C0EC28F8C7B700114272 /* CSprite.cpp */,
 				3E23C0ED28F8C7B700114272 /* CSprite.hpp */,
 				3E23C0F528F8C96100114272 /* CTransform.cpp */,
@@ -121,6 +137,8 @@
 				3EE7CB2528FE1FA400A94ECE /* CDrawable.hpp */,
 				3EE7CB2728FE23DF00A94ECE /* DrawableSystem.cpp */,
 				3EE7CB2828FE23DF00A94ECE /* DrawableSystem.hpp */,
+				28CA044A290628DA009C2813 /* CCollider.cpp */,
+				28CA044B290628DA009C2813 /* CCollider.hpp */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -384,12 +402,14 @@
 				3E23C0EE28F8C7B700114272 /* CSprite.cpp in Sources */,
 				3ECA350428F88C21002503DE /* SceneStateMachine.cpp in Sources */,
 				3ECA34E828F7D725002503DE /* Window.cpp in Sources */,
+				28CA044F29062B3A009C2813 /* CBoxCollider.cpp in Sources */,
 				3ECA34E528F7D6DD002503DE /* Game.cpp in Sources */,
 				3ECA34EB28F7D8FC002503DE /* WorkingDirectory.cpp in Sources */,
 				3ECA34FD28F87DBC002503DE /* Bitmask.cpp in Sources */,
 				3EE7CB2928FE23DF00A94ECE /* DrawableSystem.cpp in Sources */,
 				3E3BB2FA28F8B17D0042EE61 /* Object.cpp in Sources */,
 				3E23C0F728F8C96100114272 /* CTransform.cpp in Sources */,
+				28CA044C290628DA009C2813 /* CCollider.cpp in Sources */,
 				3EB8BF9628F8E7E70015A042 /* ObjectCollection.cpp in Sources */,
 				3E7DB64C28FCE5A50018AD9F /* TileMapParser.cpp in Sources */,
 				3ECA350928F89408002503DE /* SceneSplashScreen.cpp in Sources */,
