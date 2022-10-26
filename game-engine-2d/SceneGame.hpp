@@ -19,6 +19,7 @@
 #include "ObjectCollection.hpp"
 #include "CAnimation.hpp"
 #include "TileMapParser.hpp"
+#include "CBoxCollider.hpp"
 
 class SceneGame : public Scene {
 public:

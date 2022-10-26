@@ -18,6 +18,7 @@
 #include "Utilities.hpp"
 #include "Object.hpp"
 #include "CSprite.hpp"
+#include "CBoxCollider.hpp"
 
 struct TileSheetData {
     //textureId is retrieved from the textureAllocator

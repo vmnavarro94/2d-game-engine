@@ -61,6 +61,17 @@ std::vector<std::shared_ptr<Object>> TileMapParser::parse(const std::string& fil
             float y = tile->y * tileSizeY * (int)tileScale + offset.y;
             tileObject->transform->setPosition(x, y);
             
+            if (layer.first == "Collisions") {
+                auto collider = tileObject->addComponent<CBoxCollider>();
+                float left = x - (tileSizeX * tileScale) * 0.5f;
+                float top = y - (tileSizeY * tileScale) * 0.5f;
+                float width = tileSizeX * tileScale;
+                float height = tileSizeY * tileScale;
+                
+                collider->setCollidable(sf::FloatRect(left, top, width, height));
+                collider->setLayer(CollisionLayer::Tile);
+            }
+
             tileObjects.emplace_back(tileObject);
         }
         layerCount--;

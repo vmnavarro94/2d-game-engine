@@ -13,6 +13,42 @@ SceneGame::SceneGame(WorkingDirectory& workingDirectory,
     : workingDirectory(workingDirectory), textureAllocator(textureAllocator), mapParser(textureAllocator) {}
 
 void SceneGame::onCreate() {
+    /*
+    for (int i = 0; i < 500; i++)
+    {
+        std::shared_ptr<Object> player = std::make_shared<Object>();
+        
+        auto sprite = player->addComponent<CSprite>();
+        sprite->setTextureAllocator(&textureAllocator);
+        
+        auto animation = player->addComponent<CAnimation>();
+        
+        int vikingTextureID = textureAllocator.add(workingDirectory.get() + "viking.png");
+        
+        const int frameWidth = 165;
+        const int frameHeight = 145;
+        
+        std::shared_ptr<Animation> idleAnimation = std::make_shared<Animation>(FacingDirection::Right);
+        const float idleAnimFrameSeconds = 0.2f;
+        idleAnimation->addFrame(vikingTextureID, 600, 0, frameWidth, frameHeight, idleAnimFrameSeconds);
+        idleAnimation->addFrame(vikingTextureID, 800, 0, frameWidth, frameHeight, idleAnimFrameSeconds);
+        idleAnimation->addFrame(vikingTextureID, 0, 145, frameWidth, frameHeight, idleAnimFrameSeconds);
+        idleAnimation->addFrame(vikingTextureID, 200, 145, frameWidth, frameHeight, idleAnimFrameSeconds);
+        animation->addAnimation(AnimationState::Idle, idleAnimation);
+        
+        float x = static_cast <float> (rand()) /(static_cast <float> (RAND_MAX/(1920-0)));
+        float y = static_cast <float> (rand()) /(static_cast <float> (RAND_MAX/(1080-0)));
+        
+        player->transform->setPosition(x, y);
+        
+        auto collider = player->addComponent<CBoxCollider>();
+        collider->setCollidable(sf::FloatRect(x, y, frameWidth, frameHeight));
+        collider->setLayer(CollisionLayer::Default);
+        
+        objects.add(player);
+    }
+    */
+    
     std::shared_ptr<Object> player = std::make_shared<Object>();
     
     auto sprite = player->addComponent<CSprite>();
@@ -47,6 +83,11 @@ void SceneGame::onCreate() {
     walkAnimation->addFrame(vikingTextureId, 400, 435, frameWidth, frameHeight, walkAnimFrameSeconds);
     animation->addAnimation(AnimationState::Walk, walkAnimation);
     
+    player->transform->setPosition(20, 600);
+    
+    auto collider = player->addComponent<CBoxCollider>();
+    collider->setCollidable(sf::FloatRect(0, 0, frameWidth, frameHeight));
+    collider->setLayer(CollisionLayer::Player);
     objects.add(player);
     
     sf::Vector2i mapOffset(-100,128);
