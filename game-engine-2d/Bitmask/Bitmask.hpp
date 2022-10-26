@@ -14,6 +14,7 @@
 class Bitmask {
 public:
     Bitmask();
+    Bitmask(uint32_t bits);
     //Overrides this bitmask
     void setMask(Bitmask& bitmask);
     // Returns binary representation of bitmask

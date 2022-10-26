@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		28CA044C290628DA009C2813 /* CCollider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28CA044A290628DA009C2813 /* CCollider.cpp */; };
 		28CA044F29062B3A009C2813 /* CBoxCollider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28CA044D29062B3A009C2813 /* CBoxCollider.cpp */; };
+		3E1ADD392909A708005FF1C4 /* CollidableSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E1ADD372909A708005FF1C4 /* CollidableSystem.cpp */; };
 		3E23C0EE28F8C7B700114272 /* CSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E23C0EC28F8C7B700114272 /* CSprite.cpp */; };
 		3E23C0F728F8C96100114272 /* CTransform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E23C0F528F8C96100114272 /* CTransform.cpp */; };
 		3E23C0FA28F8D02A00114272 /* CKeyboardMovement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E23C0F828F8D02A00114272 /* CKeyboardMovement.cpp */; };
@@ -45,6 +46,8 @@
 		28CA044B290628DA009C2813 /* CCollider.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CCollider.hpp; sourceTree = "<group>"; };
 		28CA044D29062B3A009C2813 /* CBoxCollider.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CBoxCollider.cpp; sourceTree = "<group>"; };
 		28CA044E29062B3A009C2813 /* CBoxCollider.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CBoxCollider.hpp; sourceTree = "<group>"; };
+		3E1ADD372909A708005FF1C4 /* CollidableSystem.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CollidableSystem.cpp; sourceTree = "<group>"; };
+		3E1ADD382909A708005FF1C4 /* CollidableSystem.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CollidableSystem.hpp; sourceTree = "<group>"; };
 		3E23C0EC28F8C7B700114272 /* CSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CSprite.cpp; sourceTree = "<group>"; };
 		3E23C0ED28F8C7B700114272 /* CSprite.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CSprite.hpp; sourceTree = "<group>"; };
 		3E23C0F528F8C96100114272 /* CTransform.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CTransform.cpp; sourceTree = "<group>"; };
@@ -125,6 +128,8 @@
 				28CA044E29062B3A009C2813 /* CBoxCollider.hpp */,
 				3E749BBC29070E940052DD1E /* Quadtree.cpp */,
 				3E749BBD29070E940052DD1E /* Quadtree.hpp */,
+				3E1ADD372909A708005FF1C4 /* CollidableSystem.cpp */,
+				3E1ADD382909A708005FF1C4 /* CollidableSystem.hpp */,
 			);
 			path = Collision;
 			sourceTree = "<group>";
@@ -408,6 +413,7 @@
 				3ECA350028F88128002503DE /* Input.cpp in Sources */,
 				3EC7E1E228FA1E0D001B62E8 /* CAnimation.cpp in Sources */,
 				3EE7CB2628FE1FA400A94ECE /* CDrawable.cpp in Sources */,
+				3E1ADD392909A708005FF1C4 /* CollidableSystem.cpp in Sources */,
 				3ECA34D428F7D62E002503DE /* main.cpp in Sources */,
 				3E23C0FA28F8D02A00114272 /* CKeyboardMovement.cpp in Sources */,
 				3E23C0EE28F8C7B700114272 /* CSprite.cpp in Sources */,

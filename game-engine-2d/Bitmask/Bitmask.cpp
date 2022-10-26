@@ -10,6 +10,8 @@
 
 Bitmask::Bitmask() : bits(0) {}
 
+Bitmask::Bitmask(uint32_t bits) : bits(bits) {}
+
 void Bitmask::setMask(Bitmask& bitmask) {
     bits = bitmask.getMask();
 }

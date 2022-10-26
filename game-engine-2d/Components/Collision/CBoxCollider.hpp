@@ -17,7 +17,7 @@ class CBoxCollider : public CCollider {
 public:
     CBoxCollider(Object* owner);
     Manifold intersects(std::shared_ptr<CCollider> other) override;
-    void resolveOverlap(const Manifold& maniforld) override;
+    void resolveOverlap(const Manifold& manifold) override;
     void setCollidable(const sf::FloatRect& rect);
     const sf::FloatRect& getCollidable();
     
