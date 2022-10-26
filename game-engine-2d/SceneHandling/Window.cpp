@@ -9,40 +9,36 @@
 #include "Window.hpp"
 
 Window::Window(const std::string& windowName)
-: window(sf::VideoMode(1920, 1080), windowName, sf::Style::Titlebar)
-{
+: window(sf::VideoMode(1920, 1080), windowName, sf::Style::Titlebar) {
     window.setVerticalSyncEnabled(true);
 }
 
-void Window::update()
-{
+void Window::update() {
     sf::Event event;
-    if (window.pollEvent(event))
-    {
-        if (event.type == sf::Event::Closed)
-        {
+    if (window.pollEvent(event)) {
+        if (event.type == sf::Event::Closed) {
             window.close();
         }
     }
 }
 
-void Window::beginDraw()
-{
+void Window::beginDraw() {
     window.clear(sf::Color::White);
 }
 
-void Window::draw(const sf::Drawable& drawable)
-{
+void Window::draw(const sf::Drawable& drawable) {
     window.draw(drawable);
 }
 
-void Window::endDraw()
-{
+void Window::draw(const sf::Vertex *vertices, std::size_t vertexCount, sf::PrimitiveType type) {
+    window.draw(vertices, vertexCount, type);
+}
+
+void Window::endDraw() {
     window.display();
 }
 
-bool Window::isOpen() const
-{
+bool Window::isOpen() const {
     return window.isOpen();
 }
 

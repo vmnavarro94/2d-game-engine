@@ -20,6 +20,10 @@ public:
     void resolveOverlap(const Manifold& manifold) override;
     void setCollidable(const sf::FloatRect& rect);
     const sf::FloatRect& getCollidable();
+    void setOffset(const sf::Vector2f& offset);
+    void setOffset(float x, float y);
+    void setSize(const sf::Vector2f& size);
+    void setSize(float width, float height);
     
 private:
     void setPosition();

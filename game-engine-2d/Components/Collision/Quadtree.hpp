@@ -13,6 +13,7 @@
 #include <vector>
 #include "CBoxCollider.hpp"
 #include "Object.hpp"
+#include "Debug.hpp"
 
 //Adaptation of this quadtree: https://github.com/ryanp102694/java-simple-quadtree
 
@@ -31,6 +32,7 @@ public:
     std::vector<std::shared_ptr<CBoxCollider>> search(const sf::FloatRect& area);
     //returns the bounds of this node
     const sf::FloatRect& getBounds() const;
+    void drawDebug();
     
 private:
     void search(const sf::FloatRect& area,

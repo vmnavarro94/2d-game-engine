@@ -83,14 +83,14 @@ void SceneGame::onCreate() {
     walkAnimation->addFrame(vikingTextureId, 400, 435, frameWidth, frameHeight, walkAnimFrameSeconds);
     animation->addAnimation(AnimationState::Walk, walkAnimation);
     
-    player->transform->setPosition(20, 600);
-    
+    player->transform->setPosition(100, 700);
     auto collider = player->addComponent<CBoxCollider>();
-    collider->setCollidable(sf::FloatRect(0, 0, frameWidth, frameHeight));
+    collider->setSize(frameWidth * 0.4f, frameHeight * 0.5f);
+    collider->setOffset(0.f, 14.f);
     collider->setLayer(CollisionLayer::Player);
     objects.add(player);
     
-    sf::Vector2i mapOffset(-100,128);
+    sf::Vector2i mapOffset(-100,180);
     const std::string workingDir = workingDirectory.get();
     std::vector<std::shared_ptr<Object>> levelTiles = mapParser.parse(workingDirectory.get() + "TestMap1.tmx", mapOffset);
     
@@ -115,4 +115,5 @@ void SceneGame::lateUpdate(float deltaTime) {
 
 void SceneGame::draw(Window &window) {
     objects.draw(window);
+    Debug::draw(window);
 }

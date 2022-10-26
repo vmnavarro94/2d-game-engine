@@ -16,6 +16,7 @@ public:
     void update();
     void beginDraw();
     void draw(const sf::Drawable& drawable);
+    void draw(const sf::Vertex* vertices, std::size_t vertexCount, sf::PrimitiveType type);
     void endDraw();
     bool isOpen() const;
     sf::Vector2u getCentre() const;

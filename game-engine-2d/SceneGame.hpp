@@ -20,6 +20,7 @@
 #include "CAnimation.hpp"
 #include "TileMapParser.hpp"
 #include "CBoxCollider.hpp"
+#include "Debug.hpp"
 
 class SceneGame : public Scene {
 public:

@@ -18,6 +18,7 @@
 		3E749BBB29070C6B0052DD1E /* CInstanceId.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E749BB929070C6B0052DD1E /* CInstanceId.cpp */; };
 		3E749BBE29070E940052DD1E /* Quadtree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E749BBC29070E940052DD1E /* Quadtree.cpp */; };
 		3E7DB64C28FCE5A50018AD9F /* TileMapParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E7DB64A28FCE5A50018AD9F /* TileMapParser.cpp */; };
+		3EA70B2C2909C9AF00877A7D /* Debug.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EA70B2A2909C9AF00877A7D /* Debug.cpp */; };
 		3EB54A0428FCDF8C009ACDFE /* JungleTiles.png in Resources */ = {isa = PBXBuildFile; fileRef = 3EB54A0228FCDF8C009ACDFE /* JungleTiles.png */; };
 		3EB54A0528FCDF8C009ACDFE /* TestMap1.tmx in Resources */ = {isa = PBXBuildFile; fileRef = 3EB54A0328FCDF8C009ACDFE /* TestMap1.tmx */; };
 		3EB8BF9628F8E7E70015A042 /* ObjectCollection.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EB8BF9428F8E7E70015A042 /* ObjectCollection.cpp */; };
@@ -65,6 +66,8 @@
 		3E7DB64A28FCE5A50018AD9F /* TileMapParser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TileMapParser.cpp; sourceTree = "<group>"; };
 		3E7DB64B28FCE5A50018AD9F /* TileMapParser.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TileMapParser.hpp; sourceTree = "<group>"; };
 		3E7DB64E28FCE8550018AD9F /* Utilities.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Utilities.hpp; sourceTree = "<group>"; };
+		3EA70B2A2909C9AF00877A7D /* Debug.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Debug.cpp; sourceTree = "<group>"; };
+		3EA70B2B2909C9AF00877A7D /* Debug.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Debug.hpp; sourceTree = "<group>"; };
 		3EB54A0228FCDF8C009ACDFE /* JungleTiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = JungleTiles.png; sourceTree = "<group>"; };
 		3EB54A0328FCDF8C009ACDFE /* TestMap1.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = TestMap1.tmx; sourceTree = "<group>"; };
 		3EB54A0728FCE080009ACDFE /* rapidxml_iterators.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = rapidxml_iterators.hpp; sourceTree = "<group>"; };
@@ -221,6 +224,15 @@
 			path = ResourceAllocator;
 			sourceTree = "<group>";
 		};
+		3EA70B292909C99F00877A7D /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				3EA70B2A2909C9AF00877A7D /* Debug.cpp */,
+				3EA70B2B2909C9AF00877A7D /* Debug.hpp */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
 		3EB54A0628FCE020009ACDFE /* XMLParser */ = {
 			isa = PBXGroup;
 			children = (
@@ -279,6 +291,7 @@
 				3ECA34CE28F7D62E002503DE /* Supporting Files */,
 				3EB54A0628FCE020009ACDFE /* XMLParser */,
 				3ECA34D528F7D62E002503DE /* Resources */,
+				3EA70B292909C99F00877A7D /* Debug */,
 			);
 			path = "game-engine-2d";
 			sourceTree = "<group>";
@@ -429,6 +442,7 @@
 				3E23C0F728F8C96100114272 /* CTransform.cpp in Sources */,
 				28CA044C290628DA009C2813 /* CCollider.cpp in Sources */,
 				3EB8BF9628F8E7E70015A042 /* ObjectCollection.cpp in Sources */,
+				3EA70B2C2909C9AF00877A7D /* Debug.cpp in Sources */,
 				3E7DB64C28FCE5A50018AD9F /* TileMapParser.cpp in Sources */,
 				3ECA350928F89408002503DE /* SceneSplashScreen.cpp in Sources */,
 				3EC7E1DF28F9F4A8001B62E8 /* Animation.cpp in Sources */,

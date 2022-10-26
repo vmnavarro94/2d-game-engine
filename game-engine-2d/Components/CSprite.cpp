@@ -41,7 +41,12 @@ void CSprite::draw(Window &window) {
 }
 
 void CSprite::lateUpdate(float deltaTime) {
-    sprite.setPosition(owner->transform->getPosition());
+    sf::Vector2f pos = owner->transform->getPosition();
+    const sf::IntRect& spriteBounds = sprite.getTextureRect();
+    const sf::Vector2f& spriteScale = sprite.getScale();
+    
+    sprite.setPosition(pos.x - ((abs(spriteBounds.width) * 0.5f) * spriteScale.x),
+                       pos.y - ((abs(spriteBounds.height) * 0.5f) * spriteScale.y));
 }
 
 void CSprite::setTextureRect(int x, int y, int width, int height) {

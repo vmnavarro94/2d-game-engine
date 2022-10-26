@@ -51,6 +51,7 @@ void CollidableSystem::processRemovals() {
 }
 
 void CollidableSystem::update() {
+    collisionTree.drawDebug();
     collisionTree.clear();
     for (auto maps = collidables.begin(); maps != collidables.end(); maps++) {
         for (auto collidable : maps->second) {
@@ -84,6 +85,8 @@ void CollidableSystem::resolve() {
                 if (layersCollide) {
                     Manifold manifold = collidable->intersects(collision);
                     if (manifold.colliding) {
+                        Debug::drawRect(collision->getCollidable(), sf::Color::Red);
+                        Debug::drawRect(collidable->getCollidable(), sf::Color::Red);
                         if (collision->owner->transform->isStatic()) {
                             collidable->resolveOverlap(manifold);
                         } else {

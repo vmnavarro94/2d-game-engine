@@ -140,3 +140,12 @@ void Quadtree::split() {
     sf::FloatRect(bounds.left + childWidth, bounds.top + childHeight, childWidth, childHeight),
     this);
 }
+
+void Quadtree::drawDebug() {
+    if (children[0] != nullptr) {
+        for (int i = 0; i < 4; i++) {
+            children[i]->drawDebug();
+        }
+    }
+    Debug::drawRect(bounds, sf::Color::Red);
+}
